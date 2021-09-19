@@ -1,0 +1,32 @@
+.top-navigation {
+  border-bottom: 1px solid #e5e5e5;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .top-navigation-menu {
+    display: flex;
+    align-items: center;
+    li {
+      &:not(:last-child) {
+        padding: 0 15px 0 0;
+      }
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 0;
+      font-size: 13px;
+      line-height: 1;
+      transition: color .25s;
+      &:hover {
+        color: #ff3b33;
+      }
+    }
+    .icon {
+      font-size: 15px;
+      margin: 0 5px 0 0;
+    }
+  }
+}

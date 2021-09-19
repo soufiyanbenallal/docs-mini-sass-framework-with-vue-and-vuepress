@@ -1,0 +1,26 @@
+{
+  "name": "leventures",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "/leventures",
+  "scripts": {
+    "start": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.22.10",
+    "sass-loader": "^7.2.0",
+    "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-tabs": "^0.3.0"
+  }
+}

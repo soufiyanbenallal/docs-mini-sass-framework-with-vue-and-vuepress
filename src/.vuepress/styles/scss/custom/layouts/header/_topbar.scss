@@ -1,0 +1,12 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  .topbar-link {
+    transition: all .25s;
+  }
+  .topbar-message {
+    margin: 0;
+  }
+}

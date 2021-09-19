@@ -1,0 +1,47 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  color: #FFF;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  padding: 12px 24px;
+  font-weight: 500;
+  line-height: 1;
+  outline: none;
+  height: fit-content;
+  cursor: pointer;
+  transition: $transition;
+  &.block-button {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  &.primary-button {
+    background-color: $primary-color;
+  }
+
+  &.default-button {
+    background-color: #FFF;
+    border-color: #e5e5e5;
+    color: #878787;
+  }
+  &.secondary-button {
+    background-color: $secondary-color;
+  }
+  &.dark-button {
+    background-color: $dark-color;
+  }
+  &.link-button {
+    color: $secondary-color;
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+  &.is-small{
+    font-size: 12px!important;
+    padding: 7px 15px!important;
+  }
+  &.is-large{
+    padding: 15px 30px!important;
+  }
+}

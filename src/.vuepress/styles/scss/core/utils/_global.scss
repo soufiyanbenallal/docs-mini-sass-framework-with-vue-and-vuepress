@@ -1,0 +1,28 @@
+.clearfix{
+    @include clearfix();
+}
+
+.square {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.round-100 {
+    border-radius: 100%
+}
+
+.round {
+    border-radius: .5rem
+}
+
+.flat {
+    border-radius: 0 !important;
+    border: none;
+}
+.divider {
+    width: 100%;
+    height: .55px;
+    background-color: #dee2e6;
+}

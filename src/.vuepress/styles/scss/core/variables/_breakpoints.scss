@@ -1,0 +1,11 @@
+$mobile: 450px;
+$ipad: 992px;
+$tablet: 786px;
+$media: (grid
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+$min-grid:1;
+$max-grid:12;

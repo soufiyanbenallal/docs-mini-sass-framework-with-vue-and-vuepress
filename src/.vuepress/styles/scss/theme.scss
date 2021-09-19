@@ -1,0 +1,15 @@
+//core style 
+@import 'core';
+
+// custom style for
+@import 'custom';
+
+
+.code-copy  {
+    height: 0;
+    // transform: translateX(-16px);
+    margin-right: 40px;
+    svg{
+        width:18px !important;
+    }
+}

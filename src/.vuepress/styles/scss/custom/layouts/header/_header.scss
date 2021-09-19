@@ -1,0 +1,165 @@
+.header {
+  height: 80px;
+  box-shadow: $box-shadow;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+  }
+  @media (max-width: $ipad) {
+    height: 60px;
+  }
+  .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+  }
+  .header-left,
+  .header-right {
+    width: 50%;
+  }
+  .header-left,
+  .header-center,
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .header-left {
+    left: 0;
+    @media (max-width: $ipad) {
+      left: 15px;
+    }
+  }
+  .header-center {
+    width: 100%;
+    padding: 0 10px;
+    @media (max-width: $ipad) {
+      display: none;
+    }
+  }
+  .header-right {
+    right: 0;
+    justify-content: flex-end;
+    @media (max-width: $ipad) {
+      right: 15px;
+    }
+  }
+  .header-brand,
+  .header-actions {
+    position: relative;
+    z-index: 1;
+  }
+  .header-brand {
+    margin: 0;
+    font-size: 18px;
+  }
+  .header-brand-image {
+    display: flex;
+    align-items: center;
+    max-width: '{{ settings.logo_max_width }}';
+    height: 65px;
+    @media (max-width: $ipad) {
+      max-width: 120px;
+      height: 55px;
+    }
+    img {
+      @media (max-width: $ipad) {
+        max-width: 120px !important; // we sould have a mobile sizes in the schema
+      }
+    }
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  .header-action {
+    position: relative;
+    display: block;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    &:not(:last-child) {
+      margin: 0 15px 0 0;
+      @media (max-width: $mobile) {
+        margin: 0 12px 0 0;
+      }
+    }
+  }
+  .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #fe3b31;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFF;
+    border-radius: 50%;
+  }
+  .header-menu {
+    display: flex;
+    align-items: center;
+    a {
+      display: block;
+      height: 100%;
+      padding: 0 10px;
+      font-weight: 500;
+      line-height: 80px;
+      @media (max-width: $ipad) {
+        line-height: 60px;
+      }
+    }
+    .active-link {
+      a {
+        color: #ff3b32; // we should use the primary color
+      }
+    }
+    li {
+      &:hover {
+        .mega-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+  .mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    padding: 15px;
+    box-shadow: $box-shadow;
+    border-radius: 0 0 $border-radius $border-radius;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    z-index: 1;
+    transition: all .25s;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  cursor: pointer;
+  transition: visibility .25s, opacity .25s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}

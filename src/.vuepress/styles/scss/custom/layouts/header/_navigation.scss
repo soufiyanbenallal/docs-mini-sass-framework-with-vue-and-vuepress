@@ -1,0 +1,64 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 100%;
+  background-color: #FFF;
+  overflow-y: auto;
+  transform: translate3d(-100%, 0, 0);
+  padding: 0 15px;
+  z-index: 3;
+  transition: transform .45s cubic-bezier(.645, .045, .355, 1);
+  .navigation-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0 -15px 10px;
+    padding: 0 15px;
+    .navigation-brand-image {
+      display: flex;
+      align-items: center;
+      max-width: '{{ settings.logo_max_width }}';
+      height: 65px;
+      @media (max-width: $mobile) {
+        max-width: 120px;
+        height: 55px;
+      }
+      img {
+        @media (max-width: $mobile) {
+          max-width: 120px !important; // we sould have a mobile sizes in the schema
+        }
+      }
+    }
+  }
+  .navigation-menu {
+    a {
+      display: block;
+      padding: 10px 0;
+      font-weight: 500;
+    }
+    .active-link {
+      a {
+        color: #ff3b32; // we should use the primary color
+      }
+    }
+  }
+  &.active {
+    transform: translateZ(0);
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ff3b32;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #e5e5e5;
+  }
+  @media (max-width: $mobile) {
+    width: 90%;
+  }
+}
